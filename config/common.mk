@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
     vendor/wave/build/tools/backuptool.functions:install/bin/backuptool.functions \
     vendor/wave/build/tools/50-cm.sh:system/addon.d/50-cm.sh
 
+# World APN list
+PRODUCT_COPY_FILES += \
+    vendor/arrow/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Packages
 include vendor/wave/config/packages.mk
 
