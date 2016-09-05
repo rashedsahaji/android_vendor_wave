@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include vendor/wave/config/version.mk
+
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/wave/prebuilt/common/bin/sysinit:system/bin/sysinit  \
