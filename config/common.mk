@@ -32,9 +32,9 @@ PRODUCT_COPY_FILES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/arrow/build/tools/backuptool.sh:install/bin/backuptool.sh \
-    vendor/arrow/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    vendor/arrow/build/tools/50-cm.sh:system/addon.d/50-cm.sh
+    vendor/wave/build/tools/backuptool.sh:install/bin/backuptool.sh \
+    vendor/wave/build/tools/backuptool.functions:install/bin/backuptool.functions \
+    vendor/wave/build/tools/50-cm.sh:system/addon.d/50-cm.sh
 
 # Packages
 include vendor/wave/config/packages.mk
