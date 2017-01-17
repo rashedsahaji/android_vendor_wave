@@ -30,13 +30,20 @@ PRODUCT_COPY_FILES += \
 
 # init file
 PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/common/etc/init.local.rc:system/etc/init/init.arrow.rc
+    vendor/wave/prebuilt/common/etc/init.local.rc:system/etc/init/init.wave.rc
 
 # Backup Tool
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/wave/build/tools/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/wave/build/tools/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/wave/build/tools/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+else
 PRODUCT_COPY_FILES += \
     vendor/wave/build/tools/backuptool.sh:install/bin/backuptool.sh \
     vendor/wave/build/tools/backuptool.functions:install/bin/backuptool.functions \
     vendor/wave/build/tools/50-cm.sh:system/addon.d/50-cm.sh
+endif
 
 # World APN list
 PRODUCT_COPY_FILES += \
