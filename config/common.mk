@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensitive Phone Numbers list
 PRODUCT_COPY_FILES += \
-    vendor/arrow/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
+    vendor/wave/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
 
 # Packages
 include vendor/wave/config/packages.mk
