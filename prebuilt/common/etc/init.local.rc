@@ -20,6 +20,10 @@ on post-fs-data
     mkdir /data/ssh/empty 0600 root shell
     mkdir /cache/recovery 0770 system cache
 
+    # Create an additional OTA package directory that unlike /data/ota_package
+    # will not be touched by GmsCore.
+    mkdir /data/waveos_updates 0770 system cache
+
     # Change permissions on fsck log so it can be added to the dropbox
     chown root log /dev/fscklogs/log
     chmod 0640 /dev/fscklogs/log
@@ -162,3 +166,4 @@ on property:service.adb.tcp.port=5555
 on property:service.adb.tcp.port=-1
     stop adbd
     start adbd
+
