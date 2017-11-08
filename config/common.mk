@@ -30,6 +30,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/common/etc/init.local.rc:root/init.wave.rc
 
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/arrow/build/tools/backuptool.sh:install/bin/backuptool.sh \
+    vendor/arrow/build/tools/backuptool.functions:install/bin/backuptool.functions \
+    vendor/arrow/build/tools/50-cm.sh:system/addon.d/50-cm.sh
+
 # Packages
 include vendor/wave/config/packages.mk
 
