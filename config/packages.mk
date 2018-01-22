@@ -22,6 +22,10 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     messaging
 
+# Themes
+PRODUCT_PACKAGES += \
+    SystemDarkTheme
+
 # Extra tools
 PRODUCT_PACKAGES += \
     7z \
