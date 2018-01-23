@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    SettingsDarkTheme \
     SystemDarkTheme
 
 # Extra tools
