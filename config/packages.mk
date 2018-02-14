@@ -29,6 +29,13 @@ PRODUCT_PACKAGES += \
     SettingsDarkTheme \
     SystemDarkTheme
 
+# Overlays
+PRODUCT_PACKAGES += \
+    DuiDark \
+    GBoardDark \
+    SettingsDark \
+    SystemDark
+
 # Extra tools
 PRODUCT_PACKAGES += \
     7z \
