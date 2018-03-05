@@ -13,11 +13,40 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+WAVE_MOD_VERSION = Destiny
+
 ifndef WAVE_BUILD_TYPE
     WAVE_BUILD_TYPE := UNOFFICIAL
 endif
 
-WAVE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(WAVE_BUILD_TYPE)
+ifeq ($(WAVE_BETA),true)
+    WAVE_BUILD_TYPE := BETA
+endif
+
+CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+
+ifdef WAVE_OFFICIAL
+   LIST = $(shell curl -s https://raw.githubusercontent.com/Wave-Project/android_vendor_wave/π/wave.devices)
+   FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
+    ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+      IS_OFFICIAL=true
+      WAVE_BUILD_TYPE := OFFICIAL
+    endif
+    ifneq ($(IS_OFFICIAL), true)
+       WAVE_BUILD_TYPE := UNOFFICIAL
+       $(error Device is not official "$(FOUND)")
+    endif
+endif
+
+WAVE_VERSION := Wave-$(WAVE_MOD_VERSION)-$(CURRENT_DEVICE)-$(WAVE_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.wave.version=$(WAVE_VERSION)
+  ro.wave.version=$(WAVE_VERSION) \
+  ro.wave.releasetype=$(WAVE_BUILD_TYPE) \
+  ro.modversion=$(WAVE_MOD_VERSION)
+
+WAVE_DISPLAY_VERSION := Wave-$(WAVE_MOD_VERSION)-$(WAVE_BUILD_TYPE)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.wave.display.version=$(WAVE_DISPLAY_VERSION)
