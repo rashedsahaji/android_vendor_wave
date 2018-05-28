@@ -25,12 +25,17 @@ PRODUCT_PACKAGES += \
     Simple-Gallery \
     Stk
 
-# Themes
+# Themes Dark
 PRODUCT_PACKAGES += \
     GBoardDarkTheme \
     SettingsDarkTheme \
     SystemDarkTheme \
     SystemUIDarkTheme
+
+# Themes Black
+PRODUCT_PACKAGES += \
+    SettingsBlackTheme \
+    SystemBlackTheme
 
 # Overlays
 PRODUCT_PACKAGES += \
