@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LatinIME \
     Launcher3 \
-    messaging
+    messaging \
+    Simple-Gallery
 
 # Themes
 PRODUCT_PACKAGES += \
