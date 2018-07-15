@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
 
 # init file
 PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/common/etc/init.local.rc:root/init.wave.rc
+    vendor/wave/prebuilt/common/etc/init.local.rc:system/etc/init/init.arrow.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
