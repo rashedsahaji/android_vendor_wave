@@ -74,6 +74,11 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     WellbeingPrebuilt
 
+# Turbo
+PRODUCT_PACKAGES += \
+    Turbo \
+    turbo.xml
+
 # Extra tools
 PRODUCT_PACKAGES += \
     e2fsck \
@@ -98,9 +103,9 @@ PRODUCT_PACKAGES += \
     unrar \
     unzip \
     zip \
-	vim \
+    vim \
     rsync \
-	bash
+    bash
 
 # Exchange support
 PRODUCT_PACKAGES += \
