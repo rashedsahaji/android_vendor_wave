@@ -53,11 +53,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/common/etc/sensitive_pn.xml:system/etc/sensitive_pn.xml
 
-# Charging sounds
-PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/common/media/audio/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
-    vendor/wave/prebuilt/common/media/audio/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
-
 # Bootanimation
 include vendor/wave/config/bootanimation.mk
 
