@@ -18,7 +18,9 @@ PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/wave/prebuilt/common/bin/sysinit:system/bin/sysinit  \
 
-DEVICE_PACKAGE_OVERLAYS += vendor/wave/overlay/common
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/wave/overlay/common \
+    vendor/wave/overlay/themes
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
