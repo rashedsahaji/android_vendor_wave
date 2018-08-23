@@ -52,6 +52,7 @@ endif
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/wave/overlay/common \
     vendor/wave/overlay/dictionaries
+    vendor/wave/overlay/themes
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
@@ -169,9 +170,6 @@ USE_DEX2OAT_DEBUG ?= false
 
 #Telephony
 $(call inherit-product, vendor/wave/config/telephony.mk)
-
-# Themes
-include vendor/themes/common.mk
 
 # Wave_props
 $(call inherit-product, vendor/wave/config/wave_props.mk)
