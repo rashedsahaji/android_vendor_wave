@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
 # Custom WaveOS packages
 PRODUCT_PACKAGES += \
     LatinIME \
-    NexusLauncherPrebuilt \
+    PixelLauncher3 \
     Calendar \
     LiveWallpapers \
     LiveWallpapersPicker \
