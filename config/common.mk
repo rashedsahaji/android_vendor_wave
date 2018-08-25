@@ -170,6 +170,9 @@ USE_DEX2OAT_DEBUG ?= false
 #Telephony
 $(call inherit-product, vendor/wave/config/telephony.mk)
 
+# Themes
+include vendor/themes/common.mk
+
 # Wave_props
 $(call inherit-product, vendor/wave/config/wave_props.mk)
 
@@ -178,10 +181,10 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
 
-
 # Include SDCLANG definitions if it is requested and available
 #ifeq ($(HOST_OS),linux)
 #    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
 #        include vendor/wave/sdclang/sdclang.mk
 #    endif
 #endif
+
