@@ -77,7 +77,8 @@ PRODUCT_PACKAGES += \
 # Turbo
 PRODUCT_PACKAGES += \
     Turbo \
-    turbo.xml
+    turbo.xml \
+    privapp-permissions-turbo.xml
 
 # Extra tools
 PRODUCT_PACKAGES += \
