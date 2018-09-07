@@ -22,7 +22,8 @@ PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3 \
     messaging \
-    Simple-Gallery
+    Simple-Gallery \
+    Stk
 
 # Themes
 PRODUCT_PACKAGES += \
