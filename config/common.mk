@@ -160,6 +160,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Clean cache
+PRODUCT_COPY_FILES += \
+    vendor/wave/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
