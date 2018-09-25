@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
 # Custom WaveOS packages
 PRODUCT_PACKAGES += \
     LatinIME \
-	PixelLauncher3 \
+    Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
