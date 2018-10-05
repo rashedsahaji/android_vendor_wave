@@ -60,7 +60,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Stk \
     Recorder \
-    Music \
+    Stellio \
     Browser \
     InterfaceCenter \
     SystemUpdates \
