@@ -32,20 +32,13 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Bootanimation
-TARGET_BOOTANIMATION_480P := $(shell \
-  if [ $(TARGET_SCREEN_WIDTH) -le 720 ]; then \
-    echo 'true'; \
-  else \
-    echo ''; \
-  fi )
-
-# Bootanimation
-ifeq ($(TARGET_BOOTANIMATION_480P),true)
-PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/common/bootanimation/bootanimation-480p.zip:system/media/bootanimation.zip
+ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
+PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/bootanimation/bootanimation_720.zip:system/media/bootanimation.zip
 else
-PRODUCT_COPY_FILES += \
-    vendor/wave/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
+PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/bootanimation/bootanimation_1080.zip:system/media/bootanimation.zip
+else
+$(error "Bootanimation: TARGET_BOOT_ANIMATION_RES is undefined")
 endif
 
 # Device Overlays
