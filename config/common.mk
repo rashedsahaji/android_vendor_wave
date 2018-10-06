@@ -44,7 +44,7 @@ endif
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/wave/overlay/common \
-    vendor/wave/overlay/dictionaries
+    vendor/wave/overlay/dictionaries \
     vendor/wave/overlay/themes
 
 # EXT4/F2FS format script
@@ -185,3 +185,4 @@ endif
 #    endif
 #endif
 
+endif
