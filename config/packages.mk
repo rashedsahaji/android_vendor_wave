@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     messaging \
     Simple-Gallery \
-    Stk
+    Stk \
+    Updater
 
 # Themes Dark
 PRODUCT_PACKAGES += \
