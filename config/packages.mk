@@ -3,9 +3,8 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     LatinIME \
     Launcher3 \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    messaging
+    messaging \
+    Updater
 
 #ifeq ($(AOSIP_BUILDTYPE), Official)
 #    PRODUCT_PACKAGES += \
