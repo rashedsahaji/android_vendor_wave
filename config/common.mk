@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # World APN list
 PRODUCT_COPY_FILES += \
-    vendor/arrow/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/wave/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # Packages
 include vendor/wave/config/packages.mk
