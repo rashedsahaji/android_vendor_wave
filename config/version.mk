@@ -30,6 +30,9 @@ ifeq ($(WAVE_OFFICIAL), true)
       IS_OFFICIAL=true
       WAVE_BUILD_TYPE := OFFICIAL
 
+PRODUCT_PACKAGES += \
+    Updater
+
     endif
     ifneq ($(IS_OFFICIAL), true)
        WAVE_BUILD_TYPE := UNOFFICIAL
