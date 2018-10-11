@@ -31,16 +31,6 @@ PRODUCT_COPY_FILES += \
     vendor/wave/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
-# Bootanimation
-ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/bootanimation/bootanimation_720.zip:system/media/bootanimation.zip
-else
-ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-PRODUCT_COPY_FILES += vendor/wave/prebuilt/common/bootanimation/bootanimation_1080.zip:system/media/bootanimation.zip
-else
-$(error "Bootanimation: TARGET_BOOT_ANIMATION_RES is undefined")
-endif
-
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/wave/overlay/common \
@@ -167,7 +157,10 @@ PRODUCT_COPY_FILES += \
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
-#Telephony
+# Bootanimation 
+include vendor/wave/config/bootanimation.mk
+
+# Telephony
 $(call inherit-product, vendor/wave/config/telephony.mk)
 
 # Wave_props
